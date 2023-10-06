@@ -27,12 +27,12 @@
 .theme-dark {
     /* Theme Colors */
     --color-red: #a81c07;
-    --color-orange: #ffbf00;
+    --color-orange: #e58a29;
     --color-yellow: #ffef00;
-    --color-green: #50c878;
+    --color-green: #2fab63;
     --color-cyan: #0d98ba;
     --color-blue: #0072bb;
-    --color-purple: #663399;
+    --color-purple: #9c55e3;
     --color-pink: #cf71af;
 
     /* Text Colors */
@@ -42,7 +42,7 @@
 
     /* Background Colors */
     --background-primary: #1b1b1b;
-    --background-primary-alt: #4c4c4c;
+    --background-primary-alt: #2D2D2D;
     --background-secondary: #1f1f1f;
     --background-secondary-blur: #212121;
     --background-secondary-alt: #141414;
