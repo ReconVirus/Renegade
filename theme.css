@@ -23,7 +23,6 @@
 
     --progress-outline: rgba(0, 0, 0, 0.05);
 }
-
 .theme-dark {
     /* Theme Colors */
     --color-red: #a81c07;
@@ -49,7 +48,6 @@
 
     --progress-outline: rgba(255, 255, 255, 0.04);
 }
-
 body {
     --blur-intensity: 8px;
     --checkbox-left: 0px;
@@ -85,6 +83,68 @@ body {
     --tab-radius-active: 0px;
     --toggle-radius: 0px;
     --toggle-thumb-radius: 0px;
+}
+.callout {
+    overflow: hidden;
+    border: 1px solid rgba(var(--callout-color), 0.4);
+    border-style: solid;
+    border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+    border-width: 1px;
+    border-radius: 4px;
+    margin: 1em 0;
+    mix-blend-mode: var(--callout-blend-mode);
+    background-color: rgba(var(--callout-color), 0.1);
+    padding: 0;
+}
+.callout.is-collapsible .callout-title {
+    cursor: var(--cursor);
+}
+.callout-title {
+    padding: var(--size-4-2);
+    display: flex;
+    gap: 6px;
+    background-color: rgba(var(--callout-color), 0.1);
+    font-size: var(--callout-title-size);
+    color: rgb(var(--callout-color));
+    line-height: var(--line-height-tight);
+    align-items: flex-start;
+}
+.callout-content {
+    overflow-x: auto;
+    background-color: var(--callout-content-background);
+    border-top: 1px dashed rgba(var(--callout-color),0.4);
+    padding: var(--size-4-2);
+}
+.callout-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+.callout-icon .svg-icon {
+    color: rgb(var(--callout-color));
+}
+.callout-icon::after {
+    content: "\200B";
+}
+.callout-title-inner {
+    font-weight: var(--bold-weight);
+    color: var(--callout-title-color);
+}
+.callout-fold {
+    display: flex;
+    align-items: center;
+    padding-right: var(--size-4-2);
+    margin-left: auto;
+    padding-right: 0;
+}
+.callout-fold::after {
+    content: "\200B";
+}
+.callout-fold .svg-icon {
+    transition: transform 100ms ease-in-out;
+}
+.callout-fold.is-collapsed .svg-icon {
+    transform: rotate(-90deg);
 }
 
 .markdown-source-view .metadata-container .metadata-add-button {
