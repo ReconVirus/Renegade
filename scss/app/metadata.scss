@@ -1,0 +1,81 @@
+/* 
+.is-live-preview .metadata-container {
+	max-width:calc(var(--max-width) - var(--folding-offset));
+	margin-right:auto;
+	margin-left:max(
+		calc(50% + var(--folding-offset) - var(--line-width)/2),
+		calc(50% + var(--folding-offset) - var(--max-width)/2) ) !important;
+}
+.is-readable-line-width.is-live-preview {
+	.metadata-container { 
+		width:calc(var(--line-width) - var(--folding-offset));	
+	}
+}
+*/
+
+.metadata-container {
+  --input-height: 2rem;
+}
+
+.markdown-source-view .metadata-container {
+	transform: translateX(-4px);
+}
+
+body.metadata-heading-off {
+	.metadata-properties-heading {
+		display: none;
+	}
+}
+.metadata-add-property-off {
+	.mod-root .metadata-add-button {
+		display: none;
+	}
+}
+.metadata-dividers {
+	--metadata-divider-width: 1px;
+	--metadata-gap: 0px;
+}
+
+.metadata-icons-off {
+	.workspace-leaf-content[data-type="all-properties"] {
+		.tree-item-inner {
+			margin-left: -16px;
+		}
+		.tree-item-icon {
+			display: none;
+		}
+	}
+	.metadata-property-icon {
+		display: none;
+	}
+}
+
+.metadata-property-key {
+    align-items: center;
+    border-right: var(--metadata-divider-width) solid var(--metadata-divider-color);
+}
+.metadata-properties-title {
+    background-color: rgba(var(--secondary-accent-4-rgb), 0.1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--size-4-1);
+    padding: var(--size-4-1);
+}
+.metadata-properties-title:before {
+    content: "✧ ";
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 0 0.8em;
+    position: relative;
+}
+.metadata-properties-title::after {
+    content: " ✧";
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 0 0.8em;
+    position: relative;
+}
+
+.metadata-properties-heading {
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+}
